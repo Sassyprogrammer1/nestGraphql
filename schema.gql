@@ -1,0 +1,28 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""user"""
+type User {
+  id: ID!
+  name: String!
+  email: String!
+}
+
+type Query {
+  findUsers(ids: [Float!], names: [String!], emails: [String!]): JSON!
+}
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
+
+type Mutation {
+  createUser(newUserData: NewUserInput!): User!
+}
+
+input NewUserInput {
+  name: String!
+  email: String!
+}
