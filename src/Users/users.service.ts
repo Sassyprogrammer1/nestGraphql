@@ -7,6 +7,7 @@ import { UserArgs } from './dto/user.args';
 @Injectable()
 export class UserService {
   async create(data: NewUserInput): Promise<{ name: string; email: string }> {
+    console.log('Display the user input', data);
     return { name: data.name, email: data.email };
   }
 
